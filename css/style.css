@@ -1967,16 +1967,20 @@ ul.gallery li.active {
 
 
 
-/* UiPasta Credit */
+/* Created Credit */
 
-.uipasta-credit {
+.created-credit {
 }
 
-.uipasta-credit a {
+.created-credit p {
+    line-height: 18px;
+}
+
+.created-credit a {
     color: #ffffff;
     font-weight: 600;
 }
 
-.uipasta-credit a:hover {
+.created-credit a:hover {
     color: rgb(255,172,0);
 }
