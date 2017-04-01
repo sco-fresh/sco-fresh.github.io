@@ -368,6 +368,7 @@ body.loaded #preloader{
     font-size: 50px;
     letter-spacing: 5px;
     margin: 0;
+	white-space:pre-wrap;
 }
 
 .home-section-background p {

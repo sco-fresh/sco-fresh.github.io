@@ -205,7 +205,8 @@
             strings: ["МЕЖДУНАРОДНАЯ ОБРАЗОВАТЕЛЬНАЯ СТУДЕНЧЕСКАЯ ПЛОЩАДКА", "SPRING F.R.E.S.H. 2017"],    /* You can change the home section ere and do not use "&" use "and" */
 			startDelay: 100,
             typeSpeed: 50,
-			backDelay: 1500
+			backDelay: 1500,
+			showCursor: true
 
           });
 
