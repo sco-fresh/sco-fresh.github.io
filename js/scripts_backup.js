@@ -1,33 +1,33 @@
 /*
 
-   Table Of Content
+ Table Of Content
 
-   1. Preloader
-   2. Smooth Scroll
-   3. Scroll Naviagation Background Change with Sticky Navigation
-   4. Mobile Navigation Hide or Collapse on Click
-   5. Scroll To Top
-   6. Typed.js
-   7. Parallax Background
-   8. History Filtering
-   8. Programm Filtering
-   8. Gallery Filtering
-   9. Magnific Popup
-  10. Testimonial Carousel/Slider
-  11. Statistics Counter
-  12. Google Map
+ 1. Preloader
+ 2. Smooth Scroll
+ 3. Scroll Naviagation Background Change with Sticky Navigation
+ 4. Mobile Navigation Hide or Collapse on Click
+ 5. Scroll To Top
+ 6. Typed.js
+ 7. Parallax Background
+ 8. History Filtering
+ 8. Programm Filtering
+ 8. Gallery Filtering
+ 9. Magnific Popup
+ 10. Testimonial Carousel/Slider
+ 11. Statistics Counter
+ 12. Google Map
 
-*/
+ */
 
 (function ($) {
     'use strict';
     jQuery(document).ready(function () {
-       /* Preloader */
+        /* Preloader */
         $(window).on('load', function() {
-          $('body').addClass('loaded');
+            $('body').addClass('loaded');
         });
 
-       /* Smooth Scroll */
+        /* Smooth Scroll */
         $('a.smoth-scroll').on("click", function (e) {
             var anchor = $(this);
             $('html, body').stop().animate({
@@ -65,12 +65,12 @@
             } else {
                 $('.scroll-to-top').fadeOut();
             }
-	    });
+        });
 
-	    $('.scroll-to-top').click(function(){
+        $('.scroll-to-top').click(function(){
             $('html, body').animate({scrollTop : 0},800);
             return false;
-	    });
+        });
 
         /* Typed.js */
         $(window).load(function(){
@@ -95,9 +95,9 @@
         /* History Filtering */
         $('.history-carousel-list').owlCarousel({
             items: 1,
-			autoPlay:true,
+            autoPlay:true,
             stopOnHover: false,
-			autoplayTimeout:3000,
+            autoplayTimeout:3000,
             itemsDesktop: [1199, 1],
             itemsDesktopSmall: [980, 1],
             itemsTablet: [768, 1],
@@ -107,13 +107,13 @@
             pagination: true,
             transitionStyle : "backSlide"
         });
-		
-		/* Programm Filtering */
+
+        /* Programm Filtering */
         $('.programm-carousel-list').owlCarousel({
             items: 1,
-			autoPlay:true,
+            autoPlay:true,
             stopOnHover: false,
-			autoplayTimeout:3000,
+            autoplayTimeout:3000,
             itemsDesktop: [1199, 1],
             itemsDesktopSmall: [980, 1],
             itemsTablet: [768, 1],
@@ -126,27 +126,56 @@
 
         /* Gallery Filtering */
         $('.gallery-inner').mixItUp({
-			load: {
-				filter: '.winter2016'
-			}
-		});
+            load: {
+                filter: '.winter2016'
+            }
+        });
 
         /* Magnific Popup */
         $('.gallery-popup').magnificPopup({
             type: 'image',
             gallery: { enabled: true },
-			zoom: { enabled: false,
-			        duration: 500
+            zoom: { enabled: false,
+                duration: 500
             },
             image:{
                 markup: '<div class="mfp-figure gallery-pop-up">'+
-                    '<div class="mfp-close"></div>'+
-                    '<div class="mfp-img"></div>'+
-                    '<div class="mfp-bottom-bar gallery_title">'+
-                    '<div class="mfp-title"></div>'+
-                    '<div class="mfp-counter"></div>'+
-                    '</div>'+
-                    '</div>',
+                '<div class="mfp-close"></div>'+
+                '<div class="mfp-img"></div>'+
+                '<div class="mfp-bottom-bar gallery_title">'+
+                '<div class="mfp-title"></div>'+
+                '<div class="mfp-counter"></div>'+
+                '</div>'+
+                '</div>',
+                titleSrc:function(item){
+                    return item.el.attr('title');
+                }
+            }
+        });
+
+        /* Org-committee Filtering */
+        $('.org-committee-inner').mixItUp({
+            load: {
+                filter: '.direction'
+            }
+        });
+
+        /* Org-committee Popup */
+        $('.org-committee-popup').magnificPopup({
+            type: 'image',
+            gallery: { enabled: true },
+            zoom: { enabled: false,
+                duration: 500
+            },
+            image:{
+                markup: '<div class="mfp-figure gallery-pop-up">'+
+                '<div class="mfp-close"></div>'+
+                '<div class="mfp-img"></div>'+
+                '<div class="mfp-bottom-bar gallery_title">'+
+                '<div class="mfp-title"></div>'+
+                '<div class="mfp-counter"></div>'+
+                '</div>'+
+                '</div>',
                 titleSrc:function(item){
                     return item.el.attr('title');
                 }
@@ -154,7 +183,7 @@
         });
 
         /* Statistics Counter */
-		$('.statistics').appear(function() {
+        $('.statistics').appear(function() {
             var counter = $(this).find('.statistics-count');
             var toCount = counter.data('count');
 
