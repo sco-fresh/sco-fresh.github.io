@@ -103,7 +103,7 @@
             itemsTablet: [768, 1],
             itemsTabletSmall: false,
             itemsMobile: [479, 1],
-            autoHeight: true,
+            autoHeight: false,
             pagination: true,
             transitionStyle : "backSlide"
         });
@@ -119,7 +119,7 @@
             itemsTablet: [768, 1],
             itemsTabletSmall: false,
             itemsMobile: [479, 1],
-            autoHeight: true,
+            autoHeight: false,
             pagination: true,
             transitionStyle : "backSlide"
         });
@@ -214,5 +214,6 @@
                 }
             ]
         });
+
     });
 })(jQuery);
