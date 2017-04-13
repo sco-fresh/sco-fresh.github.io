@@ -126,6 +126,9 @@
 
         /* Gallery Filtering */
         $('.gallery-inner').mixItUp({
+            selectors: {
+                filter: '.filter-gallery'
+            },
             load: {
                 filter: '.winter2016'
             }
@@ -155,6 +158,9 @@
 
         /* Org-committee Filtering */
         $('.org-committee-inner').mixItUp({
+            selectors: {
+                filter: '.filter-org-committee'
+            },
             load: {
                 filter: '.direction'
             }
