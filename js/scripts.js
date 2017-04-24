@@ -75,7 +75,7 @@
         /* Typed.js */
         $(window).load(function(){
             $(".typing").typed({
-                strings: ["МЕЖДУНАРОДНАЯ ОБРАЗОВАТЕЛЬНАЯ СТУДЕНЧЕСКАЯ ПЛОЩАДКА", "SPRING F.R.E.S.H. 2017"],
+                strings: ["МЕЖДУНАРОДНАЯ ОБРАЗОВАТЕЛЬНАЯ СТУДЕНЧЕСКАЯ ПЛОЩАДКА", "F.R.E.S.H."],
                 startDelay: 100,
                 typeSpeed: 50,
                 backDelay: 1500,
